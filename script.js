@@ -5,7 +5,7 @@ maxZoom: 19,
 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
-
+/* Color markers based on star rating */
 var geojsonMarkerOptions_one_star = {
 radius: 6,
 fillColor: "#7A0012",
@@ -53,11 +53,6 @@ fillOpacity: 0.8
 };
 
 
-// const response = await fetch('one_star_facilities.geojson');
-// const geojsonData = await response.json(); // 
-
-// // 
-// const myGeoJSON = geojsonData; // 
 
 
 
@@ -270,6 +265,7 @@ layer.on('click', (e) => {
 // 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 // });
 
+/* add layers to map, center on Chicago*/ 
 const map = L.map('map', {
 center: [41.85, -87.64],
 zoom: 11,
