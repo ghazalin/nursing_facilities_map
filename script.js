@@ -1,57 +1,57 @@
 
 
 const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+maxZoom: 19,
+attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
 
 
 
 var geojsonMarkerOptions_one_star = {
-    radius: 8,
-    fillColor: "#3D0009",
-    color: "#3D0009",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1.0
+radius: 8,
+fillColor: "#3D0009",
+color: "#3D0009",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.9
 };
 
 
 var geojsonMarkerOptions_two_star = {
-    radius: 8,
-    fillColor: "#A04000",
-    color: "#A04000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1.0
+radius: 8,
+fillColor: "#A04000",
+color: "#A04000",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.9
 };
 
 var geojsonMarkerOptions_three_star = {
-    radius: 8,
-    fillColor: "#CB9F00",
-    color: "#CB9F00",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1.0
+radius: 8,
+fillColor: "#CB9F00",
+color: "#CB9F00",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.9
 };
 
 var geojsonMarkerOptions_four_star = {
-    radius: 8,
-    fillColor: "#6A5300",
-    color: "#6A5300",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1.0
+radius: 8,
+fillColor: "#6A5300",
+color: "#6A5300",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.9
 };
 
 var geojsonMarkerOptions_five_star = {
-    radius: 8,
-    fillColor: "#3D3000",
-    color: "#3D3000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1.0
+radius: 8,
+fillColor: "#3D3000",
+color: "#3D3000",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.9
 };
 
 
@@ -109,16 +109,16 @@ var one_star_features = {
 
 
 const one_star_facilities = L.geoJSON(one_star_features, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions_one_star)},
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, geojsonMarkerOptions_one_star)},
 
-    onEachFeature: (feature, layer) => {
-        layer.on('click', (e) => {
-            displayInfo(feature.properties);
-        });
+onEachFeature: (feature, layer) => {
+layer.on('click', (e) => {
+    displayInfo(feature.properties);
+});
 
-    }
-    
+}
+
 });
 
 
@@ -160,16 +160,16 @@ var two_star_features = {
 
 
 const two_star_facilities = L.geoJSON(two_star_features, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions_two_star)},
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, geojsonMarkerOptions_two_star)},
 
-    onEachFeature: (feature, layer) => {
-        layer.on('click', (e) => {
-            displayInfo(feature.properties);
-        });
+onEachFeature: (feature, layer) => {
+layer.on('click', (e) => {
+    displayInfo(feature.properties);
+});
 
-    }
-    
+}
+
 });
 
 
@@ -193,16 +193,16 @@ var three_star_features = {
 // const three_star_facilities = L.geoJSON(three_star_features);
 
 const three_star_facilities = L.geoJSON(three_star_features, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions_three_star)},
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, geojsonMarkerOptions_three_star)},
 
-    onEachFeature: (feature, layer) => {
-        layer.on('click', (e) => {
-            displayInfo(feature.properties);
-        });
+onEachFeature: (feature, layer) => {
+layer.on('click', (e) => {
+    displayInfo(feature.properties);
+});
 
-    }
-    
+}
+
 });
 
 var four_star_features = {
@@ -220,16 +220,16 @@ var four_star_features = {
 
 
 const four_star_facilities = L.geoJSON(four_star_features, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions_four_star)},
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, geojsonMarkerOptions_four_star)},
 
-    onEachFeature: (feature, layer) => {
-        layer.on('click', (e) => {
-            displayInfo(feature.properties);
-        });
+onEachFeature: (feature, layer) => {
+layer.on('click', (e) => {
+    displayInfo(feature.properties);
+});
 
-    }
-    
+}
+
 });
 
 var five_star_features = {
@@ -248,16 +248,16 @@ var five_star_features = {
 
 
 const five_star_facilities = L.geoJSON(five_star_features, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions_five_star)},
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, geojsonMarkerOptions_five_star)},
 
-    onEachFeature: (feature, layer) => {
-        layer.on('click', (e) => {
-            displayInfo(feature.properties);
-        });
+onEachFeature: (feature, layer) => {
+layer.on('click', (e) => {
+    displayInfo(feature.properties);
+});
 
-    }
-    
+}
+
 });
 
 
@@ -267,37 +267,44 @@ const five_star_facilities = L.geoJSON(five_star_features, {
 // });
 
 const map = L.map('map', {
-	center: [41.85, -87.64],
-	zoom: 11,
-	layers: [osm, one_star_facilities, two_star_facilities, three_star_facilities, four_star_facilities, five_star_facilities]
+center: [41.85, -87.64],
+zoom: 11,
+layers: [osm, one_star_facilities, two_star_facilities, three_star_facilities, four_star_facilities, five_star_facilities]
 });
 
 
 const baseLayers = {
-	'OpenStreetMap': osm,
-	// 'OpenStreetMap.HOT': osmHOT
+'OpenStreetMap': osm,
+// 'OpenStreetMap.HOT': osmHOT
 };
 
 const overlays = {
-    '1 Star Facilities': one_star_facilities,
-    '2 Star Facilities': two_star_facilities, 
-    '3 Star Facilities': three_star_facilities, 
-    '4 Star Facilities': four_star_facilities, 
-    '5 Star Facilities': five_star_facilities, 
+'1 Star Facilities': one_star_facilities,
+'2 Star Facilities': two_star_facilities, 
+'3 Star Facilities': three_star_facilities, 
+'4 Star Facilities': four_star_facilities, 
+'5 Star Facilities': five_star_facilities, 
 };
 
 
 const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
+// Function to update the information box
+function displayInfo(properties) {
+// Use D3.js to update the content of the information box
+d3.select('#info-content')
+.html(`
+    <facility_name_text>${properties.Provider}</facility_name_text><br>
+    <facility_info_text>${properties.Address}</facility_info_text><br><br>
 
-        // Function to update the information box
-        function displayInfo(properties) {
-            // Use D3.js to update the content of the information box
-            d3.select('#info-content')
-                .html(`
-                    <facility_name_text>${properties.Provider}</facility_name_text><br><br>
-                    <facility_info_text>${properties.Address}</facility_info_text>
-                    <facility_info_text>                 `);
-        }
+    <facility_info_numbers>${properties.Penalties}</facility_info_numbers> 
+    <facility_info_text>Penalties </facility_info_text><br>    
     
+    <facility_info_numbers>${properties.Rating}</facility_info_numbers> 
+    <facility_info_text>Star Rating </facility_info_text>   
+
+        `);
+    
+}
+
 
