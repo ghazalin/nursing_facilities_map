@@ -14,10 +14,94 @@
 
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="/script.js"></script>
-    <link rel="stylesheet" href="styles.css">
 
-	
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 1000px;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+
+
+        }
+
+
+        .right {
+            background-color: white;
+            padding: 10%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50;
+            font-family: 'Montserrat';
+
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 20;
+            font-family: 'Montserrat';
+            color: white;
+
+
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 15;
+            font-weight: 200;
+            font-family: 'Montserrat';
+            color: white;
+
+
+        }
+
+
+        facility_name_text {
+            text-align: center;
+            font-size: 18;
+            font-weight: 600;
+            /* padding: 2em; */
+            font-family: 'Montserrat';
+            color: white;
+
+
+        }
+
+        facility_info_text {
+            text-align: center;
+            font-size: 15;
+            font-weight: 400;
+            /* padding: 2em; */
+            font-family: 'Montserrat';
+            color: white;
+
+
+        }
+
+        #facility_info_box {
+            padding: 3em;
+            width: 75%;
+            float: center;
+            background-color: #375700;
+            box-shadow: offset-x offset-y blur-radius spread-radius color;
+
+        }
+
+
+	</style>
+
 	
 </head>
 <body>
@@ -30,7 +114,7 @@
 
 
 
-<!-- <script>
+<script>
 
 const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -322,17 +406,8 @@ const overlays = {
 const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
 
-        // Function to update the information box
-        function displayInfo(properties) {
-            // Use D3.js to update the content of the information box
-            d3.select('#info-content')
-                .html(`
-                    <facility_name_text>${properties.Provider}</facility_name_text><br><br>
-                    <facility_info_text>${properties.Address}</facility_info_text>
-                    <facility_info_text>                 `);
-        }
-    
-</script> -->
+
+</script>
 
 
 
@@ -351,7 +426,19 @@ const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
     
     </div>
     
-
+    <script>
+    
+        // Function to update the information box
+        function displayInfo(properties) {
+            // Use D3.js to update the content of the information box
+            d3.select('#info-content')
+                .html(`
+                    <facility_name_text>${properties.Provider}</facility_name_text><br><br>
+                    <facility_info_text>${properties.Address}</facility_info_text>
+                    <facility_info_text>                 `);
+        }
+    
+    </script>
 </div>
 
 
