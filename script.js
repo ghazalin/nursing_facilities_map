@@ -6,53 +6,59 @@ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreet
 });
 
 
-
-
 var geojsonMarkerOptions_one_star = {
-radius: 8,
-fillColor: "#3D0009",
-color: "#3D0009",
+radius: 6,
+fillColor: "#7A0012",
+color: "#7A0012",
 weight: 1,
 opacity: 1,
-fillOpacity: 0.9
+fillOpacity: 0.8
 };
 
 
 var geojsonMarkerOptions_two_star = {
-radius: 8,
+radius: 6,
 fillColor: "#A04000",
 color: "#A04000",
 weight: 1,
 opacity: 1,
-fillOpacity: 0.9
+fillOpacity: 0.8
 };
 
 var geojsonMarkerOptions_three_star = {
-radius: 8,
+radius: 6,
 fillColor: "#CB9F00",
 color: "#CB9F00",
 weight: 1,
 opacity: 1,
-fillOpacity: 0.9
+fillOpacity: 0.8
 };
 
 var geojsonMarkerOptions_four_star = {
-radius: 8,
-fillColor: "#6A5300",
-color: "#6A5300",
+radius: 6,
+fillColor: "#9D7C03",
+color: "#9D7C03",
 weight: 1,
 opacity: 1,
-fillOpacity: 0.9
+fillOpacity: 0.8
 };
 
 var geojsonMarkerOptions_five_star = {
-radius: 8,
-fillColor: "#3D3000",
-color: "#3D3000",
+radius: 6,
+fillColor: "#303D00",
+color: "#303D00",
 weight: 1,
 opacity: 1,
-fillOpacity: 0.9
+fillOpacity: 0.8
 };
+
+
+// const response = await fetch('one_star_facilities.geojson');
+// const geojsonData = await response.json(); // 
+
+// // 
+// const myGeoJSON = geojsonData; // 
+
 
 
 var one_star_features = {
@@ -120,8 +126,6 @@ layer.on('click', (e) => {
 }
 
 });
-
-
 
 
 
@@ -292,16 +296,16 @@ const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 // Function to update the information box
 function displayInfo(properties) {
 // Use D3.js to update the content of the information box
-d3.select('#info-content')
-.html(`
-    <facility_name_text>${properties.Provider}</facility_name_text><br>
-    <facility_info_text>${properties.Address}</facility_info_text><br><br>
+    d3.select('#info-content')
+    .html(`
+        <facility_name_text>${properties.Provider}</facility_name_text><br>
+        <facility_info_text>${properties.Address}</facility_info_text><br><br>
 
-    <facility_info_numbers>${properties.Penalties}</facility_info_numbers> 
-    <facility_info_text>Penalties </facility_info_text><br>    
-    
-    <facility_info_numbers>${properties.Rating}</facility_info_numbers> 
-    <facility_info_text>Star Rating </facility_info_text>   
+        <facility_info_numbers>${properties.Penalties}</facility_info_numbers> 
+        <facility_info_text>Penalties </facility_info_text><br>    
+        
+        <facility_info_numbers>${properties.Rating}</facility_info_numbers> 
+        <facility_info_text>Star Rating </facility_info_text>   
 
         `);
     

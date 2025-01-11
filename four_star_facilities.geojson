@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "four_star_facilities",
+"features": [
+{ "type": "Feature", "properties": { "CCN": "145285", "Provider": "BUCKINGHAM PAVILION", "Address": "2625 WEST TOUHY AVENUE", "ZIP": 60645, "Rating": 4.0, "Penalties": 3, "Latitude": 42.0122, "Longitude": -87.696, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.696, 42.0122 ] } },
+{ "type": "Feature", "properties": { "CCN": "145591", "Provider": "APERION CARE WESLEY", "Address": "1415 WEST FOSTER AVENUE", "ZIP": 60640, "Rating": 4.0, "Penalties": 3, "Latitude": 41.9762, "Longitude": -87.666, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.666, 41.9762 ] } },
+{ "type": "Feature", "properties": { "CCN": "145634", "Provider": "ASTORIA PLACE LIVING & REHAB", "Address": "6300 NORTH CALIFORNIA AVENUE", "ZIP": 60659, "Rating": 4.0, "Penalties": 0, "Latitude": 41.9958, "Longitude": -87.7, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.7, 41.9958 ] } },
+{ "type": "Feature", "properties": { "CCN": "145960", "Provider": "ASCENSION RESURRECTION LIFE", "Address": "7370 WEST TALCOTT AVENUE", "ZIP": 60631, "Rating": 4.0, "Penalties": 0, "Latitude": 41.9879, "Longitude": -87.811, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.811, 41.9879 ] } },
+{ "type": "Feature", "properties": { "CCN": "145974", "Provider": "NORWOOD CROSSING", "Address": "6016 NORTH NINA AVENUE", "ZIP": 60631, "Rating": 4.0, "Penalties": 3, "Latitude": 41.9904, "Longitude": -87.8, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.8, 41.9904 ] } },
+{ "type": "Feature", "properties": { "CCN": "14E169", "Provider": "WINSTON MANOR CNV & NURSING", "Address": "2155 WEST PIERCE", "ZIP": 60622, "Rating": 4.0, "Penalties": 0, "Latitude": 41.9093, "Longitude": -87.682, "one_star": "false", "two_star": "false", "three_star": "false", "four_star": "true", "five_star": "false" }, "geometry": { "type": "Point", "coordinates": [ -87.682, 41.9093 ] } }
+]
+}
